@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --font-geist-sans: 'Roboto', sans-serif;
+  --font-geist-mono: 'Montserrat', sans-serif;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-accent: #155DFC;
+  --color-lightAccent: #427AF3;
+  
+  /* Configuration du container */
+  --container-center: true;
+  --container-padding: 1rem;
+  --container-screens-sm: 640px;
+  --container-screens-md: 768px;
+  --container-screens-lg: 1024px;
+  --container-screens-xl: 1280px;
+  --container-screens-2xl: 1400px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.font-montserrat {
+  font-family: var(--font-geist-mono);
+}
+
+.font-roboto {
+  font-family: var(--font-geist-sans);
+}
+
+.blur-style {
+  filter: blur(150px);
+}
+/* Container personnalisé */
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Breakpoints du container */
+  @media (min-width: 640px) {
+    .container {
+      max-width: 640px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container {
+      max-width: 768px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .container {
+      max-width: 1280px;
+    }
+  }
+  
+  @media (min-width: 1400px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+}
